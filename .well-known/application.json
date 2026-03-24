@@ -16,16 +16,16 @@
   "validFrom": "2026-03-23T00:00:00Z",
   "validUntil": "2026-06-23T00:00:00Z",
   "credentialSubject": {
-    "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#application",
-    "schema:name": "Battery Passport Application",
-    "schema:description": "Battery Passport Application for Gaia-X compliance",
+    "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#aas-service",
+    "schema:name": "AAS Battery Passport Data Service",
+    "schema:description": "A Spring Boot-based service providing Asset Administration Shell (AAS) data for Battery Passport use cases, enabling interoperable and sovereign data exchange within Gaia-X.",
     "imx:operatedBy": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#participant",
     "imx:supportedStandards": [
       "imx:AASStandard",
       "imx:OCPStandard",
       "imx:SMPStandard"
     ],
-    "imx:endPoint": "https://lms-upatras.github.io",
+    "imx:endPoint": "http://localhost:8080",
     "imx:endPointCty": ["GR"],
     "imx:supportedUseCases": [
       "imx:BatteryPassportUseCase"
