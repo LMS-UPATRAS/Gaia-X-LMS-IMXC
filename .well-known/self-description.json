@@ -19,7 +19,6 @@
   "validUntil": "2026-06-23T00:00:00Z",
   "credentialSubject": {
     "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
-    
     "gx:legalPerson": {
       "type": "gx:LegalPerson",
       "gx:legalName": "Laboratory of Manufacturing Systems and Automations",
@@ -37,12 +36,11 @@
         "gx:region": "EL63"
       }
     },
-
     "imx:participants": [
       {
         "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#participant",
         "type": "imx:ParticipantCredential",
-        "schema:name": "LMS University of Patras",
+        "schema:name": "University of Patras - LMS Gaia-X Provider",
         "gx:registrationNumber": {
           "gx:countryCompanyNumber": "000000000",
           "gx:companyNumberQualifier": "UniversityRegistryGR",
@@ -50,20 +48,19 @@
         }
       }
     ],
-
     "imx:applications": [
       {
-        "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#application",
+        "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#aas-service",
         "type": "imx:ApplicationCredential",
-        "schema:name": "Battery Passport Application",
-        "schema:description": "Battery Passport Application for Gaia-X compliance",
+        "schema:name": "AAS Battery Passport Data Service",
+        "schema:description": "A Spring Boot-based service providing Asset Administration Shell (AAS) data for Battery Passport use cases, enabling interoperable and sovereign data exchange within Gaia-X.",
         "imx:operatedBy": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#participant",
         "imx:supportedStandards": [
           "imx:AASStandard",
           "imx:OCPStandard",
           "imx:SMPStandard"
         ],
-        "imx:endPoint": "https://lms-upatras.github.io",
+        "imx:endPoint": "http://localhost:8080",
         "imx:endPointCty": ["GR"],
         "imx:supportedUseCases": [
           "imx:BatteryPassportUseCase"
