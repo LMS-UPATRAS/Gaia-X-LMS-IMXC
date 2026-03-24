@@ -18,7 +18,7 @@
   "credentialSubject": {
     "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#aas-service",
     "schema:name": "AAS Battery Passport Data Service",
-    "schema:description": "A Spring Boot-based service providing Asset Administration Shell (AAS) data for Battery Passport use cases, enabling interoperable and sovereign data exchange within Gaia-X.",
+    "schema:description": "A Spring Boot-based service providing Asset Administration Shell (AAS) data for Battery Passport use cases, enabling interoperable and sovereign data exchange within Gaia-X. Provides REST API endpoints to retrieve all batteries and compute strategies for selected batteries.",
     "imx:operatedBy": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#participant",
     "imx:supportedStandards": [
       "imx:AASStandard",
