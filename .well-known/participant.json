@@ -17,7 +17,10 @@
   "validUntil": "2026-06-23T00:00:00Z",
   "credentialSubject": {
     "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#participant",
-    "schema:name": "LMS University of Patras",
+    "schema:name": "University of Patras - LMS Gaia-X Provider",
+    "schema:address": {
+      "schema:addressCountry": "GR"
+    },
     "gx:registrationNumber": {
       "gx:countryCompanyNumber": "000000000",
       "gx:companyNumberQualifier": "UniversityRegistryGR",
