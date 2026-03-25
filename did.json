@@ -1,5 +1,8 @@
 {
-  "@context": "https://www.w3.org/ns/did/v1",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
   "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
   "verificationMethod": [
     {
@@ -8,14 +11,15 @@
       "controller": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
       "publicKeyJwk": {
         "kty": "RSA",
-        "alg": "PS256",
-        "use": "sig",
         "n": "qRok_Kr85GYnSYaK6Pt8IFNa7CKoNCKzoAmZr-7Xy2J1u7wIAL3Tl5XbZFTvQRIuF1VGRQd_-KXd5iISDWd-bQH12e1l6F0LNwRBIS2MmfciNPsWRTNaa8qLpoqrWHVEbiQyrYCd_JHFx-cELtoqVh8-_bi53iMavTk2IQAcCsewKymPpLkeFPaLCGEuLAw1fk5pE2UVweeDM3529ASlxjlyn0VKxEnmYrkJ8zO8tnIS8vrzj120TP9CIdjQthYk5NwgdAnkPtYHiElr6M7fRFvRp_03mpb4-LAtxzsZhxhF92S7niFKIOjUi6XgRfOY1w8C_SNYR-SWa5yBihLQKw",
         "e": "AQAB"
       }
     }
   ],
   "assertionMethod": [
+    "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#key-1"
+  ],
+  "authentication": [
     "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#key-1"
   ]
 }
