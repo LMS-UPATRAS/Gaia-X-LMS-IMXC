@@ -9,7 +9,7 @@
   ],
   "id": "https://imx-compliance.fujitsu.com/imx/compliance/imx-tsp-conn/",
   "type": ["VerifiableCredential", "imx:ApplicationCredential"],
-  "issuer": "did:web:gx-compliance.fujitsu.com:imx:compliance:tsp:v1",
+  "issuer": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
   "validFrom": "2025-10-09T10:26:07.093+00:00",
   "validUntil": "2026-01-07T10:26:07.094+00:00",
   "credentialSubject": {
