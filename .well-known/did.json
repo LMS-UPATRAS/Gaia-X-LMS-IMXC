@@ -1,11 +1,11 @@
 {
   "@context": "https://www.w3.org/ns/did/v1",
-  "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
+  "id": "did:web:lms-upatras.github.io:gaia-x-lms-imxc",
   "verificationMethod": [
     {
-      "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#key-1",
+      "id": "did:web:lms-upatras.github.io:gaia-x-lms-imxc#key-1",
       "type": "JsonWebKey2020",
-      "controller": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
+      "controller": "did:web:lms-upatras.github.io:gaia-x-lms-imxc",
       "publicKeyJwk": {
         "kty": "RSA",
         "alg": "PS256",
@@ -16,6 +16,6 @@
     }
   ],
   "assertionMethod": [
-    "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#key-1"
+    "did:web:lms-upatras.github.io:gaia-x-lms-imxc#key-1"
   ]
 }
