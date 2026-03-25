@@ -9,7 +9,7 @@
   ],
   "id": "https://example.org/.well-known/imx-participant.json",
   "type": ["VerifiableCredential", "imx:ParticipantCredential"],
-  "issuer": "did:imx:showcase:sps25:trustserviceprovicer:lni",
+  "issuer": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
   "validFrom": "2025-11-20T00:00:00.000Z",
   "validUntil": "2026-02-20T00:00:00.000Z",
   "credentialSubject": {
