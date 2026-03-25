@@ -13,7 +13,7 @@
   "validFrom": "2025-11-20T00:00:00.000Z",
   "validUntil": "2026-02-20T00:00:00.000Z",
   "credentialSubject": {
-    "id": "did:imx:showcase:sps25:entity:conplement",
+    "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
     "schema:name": "conplement AG",
     "gx:registrationNumber": {
       "gx:countryCompanyNumber": "HRB22863",
