@@ -1,5 +1,8 @@
 import axios from 'axios';
 import fs from 'fs';
+import dotenv from 'dotenv';
+
+dotenv.config(); // Load .env
 
 async function main() {
   const application = JSON.parse(fs.readFileSync('./application.json', 'utf8'));
@@ -16,11 +19,13 @@ async function main() {
     "verifiableCredential": [participant, application]
   };
 
-  const vcid = "https://lms-upatras.github.io/Gaia-X-LMS-IMXC/.well-known/compliance-vc.jwt";
+  // Read DID from environment
+  const didWeb = process.env.DID_WEB;
+  const vcid = `${didWeb}/.well-known/compliance-vc.jwt`;
 
   try {
     const response = await axios.post(
-      "http://localhost:3000/validateFromJson?vcid=" + encodeURIComponent(vcid),
+      `http://localhost:3000/validateFromJson?vcid=${encodeURIComponent(vcid)}`,
       vp,
       { headers: { "Content-Type": "application/json" } }
     );
@@ -29,9 +34,8 @@ async function main() {
 
     console.log("\n✅ FINAL VC JWT:\n", vcJwt);
 
-    // Save outputs
+    // Save outputs locally
     fs.mkdirSync(".well-known", { recursive: true });
-
     fs.writeFileSync(".well-known/compliance-vc.jwt", vcJwt);
 
     console.log("\n📁 Saved to .well-known/compliance-vc.jwt");
