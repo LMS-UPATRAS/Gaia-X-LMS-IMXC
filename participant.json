@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/gaia-x/development#",
+    {
+      "imx": "http://w3id.org/imx",
+      "schema": "https://schema.org/"
+    }
+  ],
+  "id": "https://example.org/.well-known/imx-participant.json",
+  "type": ["VerifiableCredential", "imx:ParticipantCredential"],
+  "issuer": "did:imx:showcase:sps25:trustserviceprovicer:lni",
+  "validFrom": "2025-11-20T00:00:00.000Z",
+  "validUntil": "2026-02-20T00:00:00.000Z",
+  "credentialSubject": {
+    "id": "did:imx:showcase:sps25:entity:conplement",
+    "schema:name": "conplement AG",
+    "gx:registrationNumber": {
+      "gx:countryCompanyNumber": "HRB22863",
+      "gx:companyNumberQualifier": "CompanyRegistryDE",
+      "gx:countryCode": "DE"
+    }
+  }
+}
