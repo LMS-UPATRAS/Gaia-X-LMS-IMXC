@@ -21,18 +21,9 @@ async function main() {
       "verifiableCredential": [participant, application]
     };
 
-    // Use the DID_WEB_URL from .env (must be HTTPS for did:web)
-    const didWebUrl = process.env.DID_WEB_URL; 
-    if (!didWebUrl) {
-      throw new Error("❌ DID_WEB_URL not defined in .env");
-    }
-
-    // Build the VC ID URL
-    const vcid = didWebUrl.replace(/did\.json$/, 'compliance-vc.jwt');
-
-    // Send VP to local compliance engine for validation/signing
+    // Send VP to local compliance engine for signing
     const response = await axios.post(
-      `http://localhost:3000/validateFromJson?vcid=${encodeURIComponent(vcid)}`,
+      `http://localhost:3000/validateFromJson`,
       vp,
       { headers: { "Content-Type": "application/json" } }
     );
@@ -43,9 +34,9 @@ async function main() {
 
     // Save the signed VC JWT locally
     fs.mkdirSync(".well-known", { recursive: true });
-    fs.writeFileSync(".well-known/compliance-vc.jwt", vcJwt);
+    fs.writeFileSync(".well-known/participant-vp.jwt", vcJwt);
 
-    console.log("\n📁 Saved to .well-known/compliance-vc.jwt");
+    console.log("\n📁 Saved to .well-known/participant-vp.jwt");
 
   } catch (err) {
     console.error("❌ Error:", err.response?.data || err.message);
