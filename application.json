@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/gaia-x/development#",
+    {
+      "imx": "http://w3id.org/imx",
+      "schema": "https://schema.org/"
+    }
+  ],
+  "id": "https://imx-compliance.fujitsu.com/imx/compliance/imx-tsp-conn/",
+  "type": ["VerifiableCredential", "imx:ApplicationCredential"],
+  "issuer": "did:web:gx-compliance.fujitsu.com:imx:compliance:tsp:v1",
+  "validFrom": "2025-10-09T10:26:07.093+00:00",
+  "validUntil": "2026-01-07T10:26:07.094+00:00",
+  "credentialSubject": {
+    "id": "did:imx:showcase:sps25:application:TwinSphereApplication",
+    "schema:name": "Twin Sphere (Application)",
+    "schema:description": "Twin Sphere Application provided by Complement",
+    "imx:operatedBy": "did:imx:showcase:sps25:entity:Complement",
+    "imx:supportedStandards": ["imx:AASStandard", "imx:OCPStandard", "imx:SMPStandard"],
+    "imx:endPoint": "anyURL",
+    "imx:endPointCty": ["DE"],
+    "imx:supportedUseCases": ["imx:BatteryPassportUseCase", "imx:EdgeManagementUseCase"]
+  }
+}
