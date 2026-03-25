@@ -21,13 +21,13 @@ async function main() {
       "verifiableCredential": [participant, application]
     };
 
-    // Use the exact HTTPS URL of your DID JSON from .env
+    // Use the DID_WEB_URL from .env (must be HTTPS for did:web)
     const didWebUrl = process.env.DID_WEB_URL; 
     if (!didWebUrl) {
       throw new Error("❌ DID_WEB_URL not defined in .env");
     }
 
-    // Build the VC ID URL by replacing did.json with compliance-vc.jwt
+    // Build the VC ID URL
     const vcid = didWebUrl.replace(/did\.json$/, 'compliance-vc.jwt');
 
     // Send VP to local compliance engine for validation/signing
