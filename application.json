@@ -13,13 +13,13 @@
   "validFrom": "2025-10-09T10:26:07.093+00:00",
   "validUntil": "2026-01-07T10:26:07.094+00:00",
   "credentialSubject": {
-    "id": "did:imx:showcase:sps25:application:TwinSphereApplication",
+    "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
     "schema:name": "Battery R-Strategy App (Application)",
     "schema:description": "Battery R-Strategy Application provided by LMS",
     "imx:operatedBy": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
     "imx:supportedStandards": ["imx:AASStandard", "imx:OCPStandard", "imx:SMPStandard"],
     "imx:endPoint": "anyURL",
-    "imx:endPointCty": ["DE"],
+    "imx:endPointCty": ["GR"],
     "imx:supportedUseCases": ["imx:BatteryPassportUseCase", "imx:EdgeManagementUseCase"]
   }
 }
