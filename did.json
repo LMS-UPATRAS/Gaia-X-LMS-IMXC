@@ -30,4 +30,11 @@
   "service": [
    
   ],
+  "proof": {
+   "type": "JsonWebSignature2020",
+   "created": "2026-03-26T12:30:22Z",
+   "verificationMethod": "did:web:lms-upatras.github.io:Gaia-X-LMS#key-1",
+   "proofPurpose": "assertionMethod",
+   "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il0sImtpZCI6ImRpZDp3ZWI6bG1zLXVwYXRyYXMuZ2l0aHViLmlvOkdhaWEtWC1MTVMja2V5LTEifQ..qoEvmtp75uN4zIjsx6-O-iUfC-s_1VFOAQ168ScQh_tkbMp4yhirIcx-J1y4R3VNutCsRW1-g0CA6TjqTvDJNoZofHmxOnPo6HnP7hObBbkjm1AYTzU8bl-ORoyI8t6PkKA8CahLsVtEcNsXoee-gQDCk5D6DyHpXCihn_6U6xQi-GypYtE4wPV2YBpx1Pg2bSmsokSDYJedAntDaUG1iV7iMTIL9_dKVqfCQC7k0G4azjiyECChF4l-qI8_iWI3Kl47uraTQrSTg6UEHggsY1S7VdCN9qasWtjXBgxIlhsqvgbX0wcdvtoKTJXQezNgnCtmXUmhrUBxApTUg-G1nbpWUbfpDnghMeSqBiaTitrLjdTAJnm-Vlv4fcHiMs2KCbhpicpXVgnjVhIsHsvc4VZvQkPgbSCnwred__CysPS6_KvhP8GCU8pzyZKKmLdGGCizVI4l9EZUNoG8To8eh2_z9nTacmzm22MwPm8zDGDYcpWxOvKCkMi2jmFjp-7_wo_o3tUJpxygJKtB0Y6xoF_mgOMkA_saNFrAmhfmo8jrzW-gujRcu9g2yhRSb4ZovzFEyz4AqhgsYBHiLRACXXyDsMumv539WDYDmasA-J57ZalqOALwkvY04kCHFEwCtj0Ek_mvIwB3NN4TqaGpb1IC8affYUMR8mytesZSH5A"
+ }
 }
