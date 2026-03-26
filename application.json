@@ -14,9 +14,9 @@
   "validUntil": "2026-01-07T10:26:07.094+00:00",
   "credentialSubject": {
     "id": "did:imx:showcase:sps25:application:TwinSphereApplication",
-    "schema:name": "Twin Sphere (Application)",
-    "schema:description": "Twin Sphere Application provided by Complement",
-    "imx:operatedBy": "did:imx:showcase:sps25:entity:Complement",
+    "schema:name": "Battery R-Strategy App (Application)",
+    "schema:description": "Battery R-Strategy Application provided by LMS",
+    "imx:operatedBy": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
     "imx:supportedStandards": ["imx:AASStandard", "imx:OCPStandard", "imx:SMPStandard"],
     "imx:endPoint": "anyURL",
     "imx:endPointCty": ["DE"],
