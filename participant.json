@@ -14,11 +14,11 @@
   "validUntil": "2026-02-20T00:00:00.000Z",
   "credentialSubject": {
     "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
-    "schema:name": "conplement AG",
+    "schema:name": "LMS",
     "gx:registrationNumber": {
-      "gx:countryCompanyNumber": "HRB22863",
-      "gx:companyNumberQualifier": "CompanyRegistryDE",
-      "gx:countryCode": "DE"
+      "gx:countryCompanyNumber": "",
+      "gx:companyNumberQualifier": "CompanyRegistryGR",
+      "gx:countryCode": "GR"
     }
   }
 }
