@@ -7,7 +7,7 @@
   "verificationMethod": [
     {
       "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#key-1",
-      "type": "JsonWebKey2020",
+      "type": "JsonWebKey",
       "controller": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
       "publicKeyJwk": {
         "kty": "RSA",
