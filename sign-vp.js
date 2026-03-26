@@ -28,13 +28,13 @@ async function main() {
       { headers: { "Content-Type": "application/json" } }
     );
 
-    const vcJwt = response.data.signedComplianceCredentialJwt;
+    const vpJwt = response.data.signedComplianceCredentialJwt;
 
-    console.log("\n✅ FINAL VC JWT:\n", vcJwt);
+    console.log("\n✅ FINAL VP JWT:\n", vpJwt);
 
-    // Save the signed VC JWT locally
+    // Save the signed VP JWT locally
     fs.mkdirSync(".well-known", { recursive: true });
-    fs.writeFileSync(".well-known/participant-vp.jwt", vcJwt);
+    fs.writeFileSync(".well-known/participant-vp.jwt", vpJwt);
 
     console.log("\n📁 Saved to .well-known/participant-vp.jwt");
 
