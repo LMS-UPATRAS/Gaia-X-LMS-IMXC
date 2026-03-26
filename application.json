@@ -13,7 +13,7 @@
   "validFrom": "2025-10-09T10:26:07.093+00:00",
   "validUntil": "2026-01-07T10:26:07.094+00:00",
   "credentialSubject": {
-    "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
+    "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC:application:BatteryApplication",
     "schema:name": "Battery R-Strategy App (Application)",
     "schema:description": "Battery R-Strategy Application provided by LMS",
     "imx:operatedBy": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
