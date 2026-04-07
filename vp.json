@@ -4,7 +4,7 @@
     "https://w3id.org/gaia-x/development#"
   ],
   "type": ["VerifiablePresentation"],
-  "holder": "did:imx:showcase:sps25:entity:conplement",
+  "holder": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
   "verifiableCredential": [
     {
       "$ref": "./participant.json"
