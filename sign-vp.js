@@ -2,56 +2,61 @@ import axios from 'axios';
 import fs from 'fs';
 import dotenv from 'dotenv';
 
-dotenv.config(); // Load .env
-
+dotenv.config();
 
 async function main() {
   try {
-    // 1. Load your Participant and Application credentials
-    // Note: These should already be signed JWTs or valid Gaia-X JSON-LD
+    // 1. Load the CLEAN files we just created
     const application = JSON.parse(fs.readFileSync('./application.json', 'utf8'));
     const participant = JSON.parse(fs.readFileSync('./participant.json', 'utf8'));
 
     // 2. Build the Verifiable Presentation (VP)
+    // IMPORTANT: The @context must include the W3C Credentials v2 for IMXC
     const vp = {
       "@context": [
         "https://www.w3.org/ns/credentials/v2",
-        "https://w3id.org/gaia-x/development#"
+        "https://w3id.org/gaia-x/development#",
+        "http://w3id.org/imx"
       ],
       "type": ["VerifiablePresentation"],
-      // Use your REAL DID here
       "holder": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC", 
       "verifiableCredential": [participant, application]
     };
 
-    console.log("⏳ Sending VP to local compliance engine...");
+    console.log("⏳ Sending VP to local compliance engine at http://localhost:3000/validateFromJson...");
 
-    // 3. Send to your local compliance service (Port 3000)
-    // This assumes your local tool has your private key configured!
+    // 3. Request the signature
+    // Note: If 'validateFromJson' gives a 404, try 'validateAndSignVcFromVp' 
+    // or wait for the IMX team to provide their official endpoint.
     const response = await axios.post(
-      `http://localhost:3000/validateFromJson`,
+      `http://localhost:3000/validateFromJson`, 
       vp,
       { headers: { "Content-Type": "application/json" } }
     );
 
-    // 4. Extract the signed JWT
-    const vpJwt = response.data.signedComplianceCredentialJwt;
+    // 4. Extract the signed JWT 
+    // The key name might vary (signedComplianceCredentialJwt or just jwt) depending on your tool version
+    const vpJwt = response.data.signedComplianceCredentialJwt || response.data.jwt;
 
     if (!vpJwt) {
-        throw new Error("Compliance engine did not return a signed JWT. Check local logs.");
+        console.error("DEBUG: Received response structure:", response.data);
+        throw new Error("Compliance engine did not return a signed JWT.");
     }
 
-    console.log("\n✅ SUCCESS! FINAL VP JWT GENERATED.");
-
-    // 5. Save with the HM26 required naming convention
-    const filename = "upatras.provider.battery.json"; // Using .json as discussed!
+    // 5. Save the final "Passport"
+    const filename = "upatras.provider.battery.json"; 
     fs.writeFileSync(filename, vpJwt);
 
-    console.log(`\n📁 Saved as: ${filename}`);
-    console.log("🚀 You are now ready to upload this file to Nextcloud.");
+    console.log("\n✅ SUCCESS! FINAL VP JWT GENERATED.");
+    console.log(`📁 Saved as: ${filename}`);
+    console.log("🚀 Upload this file to: https://nextcloud.truzzt.eu/s/8yAyyAWA7JRz9Am");
 
   } catch (err) {
-    console.error("❌ Error:", err.response?.data || err.message);
+    if (err.code === 'ECONNREFUSED') {
+        console.error("❌ Error: Local server on port 3000 is not running. Start your Docker container/service first!");
+    } else {
+        console.error("❌ Error:", err.response?.data || err.message);
+    }
   }
 }
 
