@@ -21,5 +21,8 @@
   ],
   "assertionMethod": [
     "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#JWK"
+  ],
+  "authentication": [
+    "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#JWK"
   ]
 }
