@@ -4,13 +4,51 @@
     "https://w3id.org/gaia-x/development#"
   ],
   "type": ["VerifiablePresentation"],
+  "id": "urn:uuid:762a456b-1234-4567-8901-abcdef123456",
   "holder": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
   "verifiableCredential": [
     {
-      "$ref": "./participant.json"
+      "@context": [
+        "https://www.w3.org/ns/credentials/v2",
+        "https://w3id.org/gaia-x/development#",
+        { "imx": "http://w3id.org/imx", "schema": "https://schema.org/" }
+      ],
+      "id": "https://lms-upatras.github.io/Gaia-X-LMS-IMXC/participant.json",
+      "type": ["VerifiableCredential", "imx:ParticipantCredential"],
+      "issuer": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
+      "validFrom": "2026-04-07T12:00:00Z",
+      "validUntil": "2027-04-07T12:00:00Z",
+      "credentialSubject": {
+        "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
+        "schema:name": "LMS - University of Patras",
+        "gx:registrationNumber": {
+          "gx:companyNumber": "EL123456789",
+          "gx:companyNumberQualifier": "CompanyRegistryGR",
+          "gx:countryCode": "GR"
+        }
+      }
     },
     {
-      "$ref": "./application.json"
+      "@context": [
+        "https://www.w3.org/ns/credentials/v2",
+        "https://w3id.org/gaia-x/development#",
+        { "imx": "http://w3id.org/imx", "schema": "https://schema.org/" }
+      ],
+      "id": "https://lms-upatras.github.io/Gaia-X-LMS-IMXC/application.json",
+      "type": ["VerifiableCredential", "imx:ApplicationCredential"],
+      "issuer": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
+      "validFrom": "2026-04-07T12:00:00Z",
+      "validUntil": "2027-04-07T12:00:00Z",
+      "credentialSubject": {
+        "id": "did:imx:showcase:lms:application:BatteryAAS",
+        "schema:name": "Battery R-Strategy Admin Shell",
+        "schema:description": "Asset Administration Shell for Battery Circularity Strategy",
+        "imx:operatedBy": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
+        "imx:supportedStandards": ["imx:AASStandard"],
+        "imx:endPoint": "https://rstrategy.lmsupatras.gr/api/batteries/getAll",
+        "imx:endPointCty": ["GR"],
+        "imx:supportedUseCases": ["imx:BatteryPassportUseCase"]
+      }
     }
   ]
 }
