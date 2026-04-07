@@ -3,7 +3,7 @@
     "https://www.w3.org/ns/credentials/v2",
     "https://w3id.org/gaia-x/development#",
     {
-      "imx": "http://w3id.org/imx",
+      "imx": "http://w3id.org/imx#",
       "schema": "https://schema.org/"
     }
   ],
@@ -17,6 +17,7 @@
   "validUntil": "2027-04-07T12:00:00Z",
   "credentialSubject": {
     "id": "did:imx:showcase:lms:application:BatteryAAS",
+    "type": "imx:Application",
     "schema:name": "Battery R-Strategy Admin Shell",
     "schema:description": "Asset Administration Shell for Battery Circularity Strategy",
     "imx:operatedBy": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
@@ -24,9 +25,6 @@
       "imx:AASStandard"
     ],
     "imx:endPoint": "https://rstrategy.lmsupatras.gr/api/batteries/getAll",
-    "imx:endPointCty": [
-      "GR"
-    ],
     "imx:supportedUseCases": [
       "imx:BatteryPassportUseCase"
     ]
