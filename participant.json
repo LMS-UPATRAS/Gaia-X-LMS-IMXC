@@ -1,24 +1,24 @@
 {
   "@context": [
-    "https://www.w3.org/ns/credentials/v2",
-    "https://w3id.org/gaia-x/development#",
-    {
-      "imx": "http://w3id.org/imx",
-      "schema": "https://schema.org/"
-    }
+    "https://www.w3.org/2018/credentials/v1",
+    "http://w3id.org/imx",
+    "https://w3id.org/gaia-x/development#"
   ],
-  "id": "https://example.org/.well-known/imx-participant.json",
+  "id": "https://lms-upatras.github.io/Gaia-X-LMS-IMXC/participant.json",
   "type": ["VerifiableCredential", "imx:ParticipantCredential"],
   "issuer": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
-  "validFrom": "2025-11-20T00:00:00.000Z",
-  "validUntil": "2026-02-20T00:00:00.000Z",
+  "issuanceDate": "2026-04-07T12:00:00Z",
   "credentialSubject": {
     "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
-    "schema:name": "LMS",
+    "type": "gx:LegalParticipant",
+    "gx:legalName": "LMS - University of Patras",
     "gx:registrationNumber": {
-      "gx:countryCompanyNumber": "",
-      "gx:companyNumberQualifier": "CompanyRegistryGR",
+      "gx:companyNumber": "EL123456789",
+      "gx:companyNumberQualifier": "VAT",
       "gx:countryCode": "GR"
+    },
+    "gx:headquarterAddress": {
+      "gx:countrySubdivisionCode": "GR-I"
     }
   }
 }
