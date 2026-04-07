@@ -3,7 +3,8 @@
     "https://www.w3.org/ns/credentials/v2",
     "https://w3id.org/gaia-x/development#",
     {
-      "imx": "http://w3id.org/imx",
+      "imx": "http://w3id.org/imx#",
+      "gx": "https://w3id.org/gaia-x/core#",
       "schema": "https://schema.org/"
     }
   ],
@@ -17,9 +18,11 @@
   "validUntil": "2027-04-07T12:00:00Z",
   "credentialSubject": {
     "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
+    "type": "imx:Participant",
     "schema:name": "LMS - University of Patras",
     "gx:registrationNumber": {
-      "gx:companyNumber": "EL123456789",
+      "type": "gx:CompanyRegistration",
+      "gx:countryCompanyNumber": "EL123456789",
       "gx:companyNumberQualifier": "CompanyRegistryGR",
       "gx:countryCode": "GR"
     }
