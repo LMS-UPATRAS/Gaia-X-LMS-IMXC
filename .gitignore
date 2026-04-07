@@ -1,0 +1,39 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Environment variables (CRITICAL: Do not leak your private keys/secrets)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Private Keys and sensitive PEMs
+# Only keep public certificates like x509CertificateChain.pem tracked
+**/private-key.pem
+**/*.key
+**/*.p12
+**/*.pfx
+
+# Debug logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build/Temporary folders
+dist/
+build/
+temp/
