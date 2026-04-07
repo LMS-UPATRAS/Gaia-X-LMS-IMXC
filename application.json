@@ -14,7 +14,7 @@
     "schema:description": "Asset Administration Shell for Battery Circularity Strategy",
     "imx:operatedBy": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
     "imx:supportedStandards": ["imx:AASStandard"],
-    "imx:endPoint": "https://your-springboot-app.com/api/aas",
+    "imx:endPoint": "https://rstrategy.lmsupatras.gr/api/batteries/getAll",
     "imx:endPointCty": ["GR"],
     "imx:supportedUseCases": ["imx:BatteryPassportUseCase"]
   }
