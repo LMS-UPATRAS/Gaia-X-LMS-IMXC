@@ -6,35 +6,25 @@
   "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
   "verificationMethod": [
     {
-      "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#key-1",
+      "id": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#X509-JWK",
       "type": "JsonWebKey",
       "controller": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC",
       "publicKeyJwk": {
         "kty": "RSA",
-        "n": "qRok_Kr85GYnSYaK6Pt8IFNa7CKoNCKzoAmZr-7Xy2J1u7wIAL3Tl5XbZFTvQRIuF1VGRQd_-KXd5iISDWd-bQH12e1l6F0LNwRBIS2MmfciNPsWRTNaa8qLpoqrWHVEbiQyrYCd_JHFx-cELtoqVh8-_bi53iMavTk2IQAcCsewKymPpLkeFPaLCGEuLAw1fk5pE2UVweeDM3529ASlxjlyn0VKxEnmYrkJ8zO8tnIS8vrzj120TP9CIdjQthYk5NwgdAnkPtYHiElr6M7fRFvRp_03mpb4-LAtxzsZhxhF92S7niFKIOjUi6XgRfOY1w8C_SNYR-SWa5yBihLQKw",
+        "n": "t1Hdwd5k8Duqb82AsKDfnwKMZzLQA1N3vc3ndDfHyCY2t_zWO3fqpwNv6cfbDwQrH-QUg_u1FrodGt1mY33NufxOvlBYuc-Se84_DvI9vCdtI-tv585XHklbDNGmSDv_RclOSmbaueLFSKexflapyIhCzPNKp7ZU3vqj5tx3YQMLvnAz6VLITdfM7CzqV-WOzmjVn8yNIQFu6VRmtk8XEMxSP-7trdTzXrot4BLkqJzfzpfPzKU2L7G8_9JyIeTsXDzK-eoGYpd6ScFEGVoaYYBMrY_GosKE1WFj_ZCoKUb2K61bI8rHO4yB5sCMenhBXjQPKijV8Bv3ITFieudnSp54V6LOkUAkoaCOnpZ7jAb7_1F5Xw3vi4Tx2x0-GZzrlD1qlVWWlg48u6lM_kff-ARf4PMQnXmLnOTBPVpAg4HZnl1JecPUT_lkpilQnWZtBSF-BTdamN4eB02aKmrEOrTlaSxyu-3GYmHgsQVeYsWFMt2aMryaVL1iSEUMduwKi0MneTkX1wdWIScqWPqBO8GQOoW5QXxBXW1taK07LLjJ6dLfBYjFF1GfLBO4Y3cvk6Rh_qaEqb+rY1_qCOFnQ9a62mEzb_eqFJFzillpCCHmo2xaKp6_Sj9DpLhcKlTKQ0lTWvmk7VW1K05s1XDyzbSyzGz6ToupeySuJnPqyHM",
         "e": "AQAB",
         "alg": "PS256",
         "x5c": [
-            "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"
+          "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"
         ],
         "x5u": "https://lms-upatras.github.io/Gaia-X-LMS-IMXC/.well-known/x509CertificateChain.pem"
       }
     }
   ],
   "assertionMethod": [
-    "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#key-1"
+    "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#X509-JWK"
   ],
   "authentication": [
-    "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#key-1"
-  ],
-  "service": [
-   
-  ],
-  "proof": {
-    "type": "JsonWebSignature2020",
-    "created": "2026-03-23T12:30:37Z",
-    "verificationMethod": "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#key-1",
-    "proofPurpose": "assertionMethod",
-    "jws": "eyJhbGciOiJSUzI1NiIsImlzcyI6ImRpZDp3ZWI6bG1zLXVwYXRyYXMuZ2l0aHViLmlvOkdhaWEtWC1MTVMtSU1YQyIsImtpZCI6ImRpZDp3ZWI6bG1zLXVwYXRyYXMuZ2l0aHViLmlvOkdhaWEtWC1MTVMtSU1YQyNYNTA5LUpXSyIsImlhdCI6MTc3NTU1Nzg2NDkwMiwiZXhwIjoxNzgzMzMzODY0OTAyLCJjdHkiOiJ2YyIsInR5cCI6InZjK2p3dCJ9"
-  }
+    "did:web:lms-upatras.github.io:Gaia-X-LMS-IMXC#X509-JWK"
+  ]
 }
