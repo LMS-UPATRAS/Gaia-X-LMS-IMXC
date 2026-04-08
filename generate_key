@@ -1,0 +1,27 @@
+import { webcrypto } from 'node:crypto';
+
+async function generateGaiaXKey() {
+  // Use webcrypto for a standardized way to get keys
+  const keyPair = await webcrypto.subtle.generateKey(
+    {
+      name: "RSASSA-PKCS1-v1_5",
+      modulusLength: 2048,
+      publicExponent: new Uint8Array([1, 0, 1]),
+      hash: "SHA-256",
+    },
+    true, 
+    ["sign", "verify"]
+  );
+
+  // Export to JWK format
+  const publicKey = await webcrypto.subtle.exportKey("jwk", keyPair.publicKey);
+  const privateKey = await webcrypto.subtle.exportKey("jwk", keyPair.privateKey);
+
+  console.log("--- PUBLIC KEY (Put this in your did.json) ---");
+  console.log(JSON.stringify(publicKey, null, 2));
+
+  console.log("\n--- PRIVATE KEY (SAVE TO A PRIVATE FILE) ---");
+  console.log(JSON.stringify(privateKey, null, 2));
+}
+
+generateGaiaXKey();
